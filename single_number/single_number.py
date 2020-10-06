@@ -4,8 +4,19 @@ Returns: an integer
 '''
 def single_number(arr):
     # Your code here
+    num = arr[0]
+    i = 1
+    while i < len(arr) and len(arr) > 1:
+        if arr[i] == num:
+            arr.pop(i)
+            arr.pop(0)
+            num = arr[0]
+            i = 0
+        i += 1
 
-    pass
+    return arr[0]
+
+        
 
 
 if __name__ == '__main__':
